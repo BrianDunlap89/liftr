@@ -12,6 +12,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'pg'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -27,6 +28,9 @@ gem 'link_thumbnailer'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Devise for secure login, sessions and user authentication
+gem 'devise'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -37,7 +41,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'pry'
-  gem 'sqlite3'
 end
 
 group :development do
@@ -49,7 +52,6 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 

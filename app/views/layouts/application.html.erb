@@ -119,13 +119,13 @@
       <% if current_user %>
       <ul class="navmenu">
         <li><%= link_to "Home", posts_path %></li>
-        <li><%= link_to "Signout", login_path, method: "delete" %></li>
+        <li><%= link_to "Signout", destroy_user_session %></li>
       </ul>
       <% else %>
       <ul class="navmenu">
         <li><%= link_to "Home", posts_path %></li>
-        <li><%= link_to "Login", login_path %></li>
-        <li><%= link_to "Sign Up", signup_path %></li>
+        <li><%= link_to "Login", new_user_session_path %></li>
+        <li><%= link_to "Sign Up", new_user_registration_path %></li>
         <% end %>
     </nav>
 
