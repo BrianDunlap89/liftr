@@ -15,5 +15,9 @@
   #     redirect_to login_path
   #   end
   # end
+
+  def after_sign_in_path_for(resource)
+  redirect_to posts_path
+  end
 end
 
