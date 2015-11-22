@@ -27,6 +27,9 @@ gem 'link_thumbnailer'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Devise for secure login, sessions and user authentication
+gem 'devise'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
