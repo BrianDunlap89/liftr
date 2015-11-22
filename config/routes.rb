@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'upvote/create'
 
   get 'upvote/destroy'
@@ -32,14 +33,17 @@ Rails.application.routes.draw do
   get "users/:id/posts", to: "users#myposts", as: "myposts"
   get "users/:id/comments", to: "users#mycomments", as: "mycomments"
 
-#SESSION CONTROLLER
-  get "login", to: "sessions#new", as: "login"
-  post "login", to: "sessions#create"
-  delete "login", to: "sessions#destroy"
+# #SESSION CONTROLLER
+#   get "login", to: "sessions#new", as: "login"
+#   post "login", to: "sessions#create"
+#   delete "login", to: "sessions#destroy"
 
-#REGISTRATION CONTROLLER
-  get "signup", to: "registrations#new", as: "signup"
-  post "signup", to: "registrations#create"
+# #REGISTRATION CONTROLLER
+#   get "signup", to: "registrations#new", as: "signup"
+#   post "signup", to: "registrations#create"
+
+#DEVISE 
+  # devise_for :users, :controllers => {:registrations => "registrations"}
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
